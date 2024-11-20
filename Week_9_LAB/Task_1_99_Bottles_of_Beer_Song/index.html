@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>99 Bottles of Beer</title>
+</head>
+<body>
+    <h1>99 Bottles of Beer on the Wall</h1>
+    <div id="song"></div>
+
+    <script>
+        // Function to generate the lyrics
+        function generateLyrics() {
+            let lyrics = '';  // To store the lyrics
+            for (let i = 99; i > 0; i--) {
+                lyrics += i + " bottles of beer on the wall, " + i + " bottles of beer.<br>";
+                lyrics += "Take one down and pass it around, " + (i - 1) + " bottles of beer on the wall.<br><br>";
+            }
+            lyrics += "No more bottles of beer on the wall, no more bottles of beer.<br>";
+            lyrics += "Go to the store and buy some more, 99 bottles of beer on the wall.<br>";
+
+            // Display the lyrics in the 'song' div
+            document.getElementById("song").innerHTML = lyrics;
+        }
+
+        // Call the function to generate and display the lyrics
+        generateLyrics();
+    </script>
+</body>
+</html>
